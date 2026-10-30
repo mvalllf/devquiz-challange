@@ -4,74 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistem Absensi Mahasiswa</title>
+  <title>Quiz Interaktif Pemrograman</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <h1>📌 Absensi Mahasiswa</h1>
-      <p>Masukkan NIM, nama, dan kode absensi untuk mencatat kehadiran.</p>
+      <h1>🚀 DevQuiz Challenge</h1>
+      <p>Uji pengetahuan dasarmu seputar HTML, CSS, dan JavaScript!</p>
     </header>
 
-    <main class="main-content">
-      <!-- Form Input Absensi -->
-      <section class="card">
-        <h2>Form Presensi</h2>
-        <form id="attendance-form" class="form">
-          <div class="form-group">
-            <label for="student-nim">NIM Mahasiswa</label>
-            <input type="text" id="student-nim" placeholder="Contoh: H1H026013" required autocomplete="off">
-          </div>
+    <main class="quiz-card">
+      <!-- Tampilan Halaman Utama / Mulai -->
+      <div id="start-screen" class="screen">
+        <h2>Selamat Datang, Peserta!</h2>
+        <p>Kamu akan menjawab beberapa pertanyaan pilihan ganda. Skor tertinggi akan tersimpan otomatis.</p>
+        <button id="start-btn" class="btn btn-primary">Mulai Kuis</button>
+      </div>
 
-          <div class="form-group">
-            <label for="student-name">Nama Lengkap</label>
-            <input type="text" id="student-name" placeholder="Contoh: Muhammad Rifqi Firmansyah" required autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="attendance-code">Kode Absensi (Kode Hari Ini: <strong id="valid-code-display">PRESEN2026</strong>)</label>
-            <input type="text" id="attendance-code" placeholder="Masukkan kode..." required autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="student-status">Status Kehadiran</label>
-            <select id="student-status">
-              <option value="Hadir">Hadir</option>
-              <option value="Izin">Izin</option>
-              <option value="Sakit">Sakit</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Kirim Presensi</button>
-        </form>
-        <div id="message-box" class="message hidden"></div>
-      </section>
-
-      <!-- Tabel Data Absensi -->
-      <section class="card">
-        <div class="card-header">
-          <h2>Data Kehadiran</h2>
-          <button id="clear-data-btn" class="btn btn-danger">Hapus Semua Data</button>
+      <!-- Tampilan Pertanyaan Kuis -->
+      <div id="quiz-screen" class="screen hidden">
+        <div class="quiz-info">
+          <span id="question-number">Soal 1 dari 4</span>
+          <span id="high-score-display">Skor Tertinggi: 0</span>
         </div>
-
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Waktu</th>
-                <th>NIM</th>
-                <th>Nama</th>
-                <th>Status</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody id="attendance-tbody">
-              <!-- Data dimasukkan otomatis oleh JS -->
-            </tbody>
-          </table>
+        <h2 id="question-text">Pertanyaan akan muncul di sini...</h2>
+        <div id="options-container" class="options-grid">
+          <!-- Opsi jawaban dimasukkan via JS -->
         </div>
-      </section>
+      </div>
+
+      <!-- Tampilan Hasil Akhir -->
+      <div id="result-screen" class="screen hidden">
+        <h2>Kuis Selesai! 🎉</h2>
+        <p id="final-score-text">Skor kamu: 0</p>
+        <button id="restart-btn" class="btn btn-primary">Ulangi Kuis</button>
+      </div>
     </main>
   </div>
 
