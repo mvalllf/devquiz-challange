@@ -6,7 +6,7 @@ Aplikasi web kuis interaktif berbasis web statis untuk menguji pengetahuan dasar
 
 ## 👥 Anggota Kelompok
 * **Muhammad Rival Firmansyah** — GitHub: [@mvalllf](https://github.com/mvalllf) *(Ketua / Developer Utama)*
-* **[Nama Anggota 2]** — GitHub: [@username2](https://github.com/) *(UI/UX & CSS Designer)*
+* **[Muhammad Rifqi Faza]** — GitHub: [@username2](https://github.com/rifqifaza) *(UI/UX & CSS Designer)*
 
 ---
 
